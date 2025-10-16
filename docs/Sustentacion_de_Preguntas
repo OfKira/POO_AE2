@@ -1,0 +1,24 @@
+Sobre la clase CuentaBancaria
+
+¿Por qué el atributo saldo debe ser privado?
+Para protegerlo. Si fuera público, cualquiera podría cambiar el saldo directamente y dañar la lógica del programa.
+Con private, solo los métodos depositar y retirar pueden modificarlo de forma segura.
+
+¿Qué ocurriría si se intenta depositar un valor negativo?
+El método no lo permite. Muestra un mensaje de error y no cambia el saldo, evitando que se reste dinero por accidente.
+
+Modifique en vivo el código para permitir un sobregiro máximo de -50 y explique el cambio.
+Se puede cambiar la validación en retirar() así:
+
+Sobre la clase Producto:
+
+¿Por qué se valida el porcentaje del descuento?
+→ Para que el descuento tenga sentido. Si fuera mayor del 50%, el precio bajaría demasiado o se volvería negativo.
+
+¿Qué sucede si el precio unitario es negativo?
+→ El código lanza un error y no lo acepta. Un producto no puede tener precio negativo, por eso se valida.
+
+Agregue en vivo un impuesto del 8% y explique cómo afecta al total.
+→ Se multiplica el subtotal por 1.08.
+Por ejemplo, si el subtotal es 45, con el impuesto el total sería 45 * 1.08 = 48.6.
+Aumenta el valor final en un 8%.
